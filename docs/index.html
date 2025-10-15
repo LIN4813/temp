@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIN酱汁未命名</title>
+    <title>现代企业网站</title>
+    <!-- 引入Font Awesome图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* 全局重置和基础样式 */
         * {
             margin: 0;
             padding: 0;
@@ -13,19 +15,22 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* CSS变量定义，便于统一管理颜色 */
         :root {
-            --primary: #4361ee;
-            --secondary: #3a0ca3;
-            --accent: #4cc9f0;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --success: #4bb543;
+            --primary: #4361ee;     /* 主色调 - 蓝色 */
+            --secondary: #3a0ca3;   /* 辅助色 - 深蓝色 */
+            --accent: #4cc9f0;      /* 强调色 - 浅蓝色 */
+            --light: #f8f9fa;       /* 浅色背景 */
+            --dark: #212529;        /* 深色文字 */
+            --success: #4bb543;     /* 成功色 */
         }
 
+        /* 平滑滚动效果 */
         html {
             scroll-behavior: smooth;
         }
 
+        /* 主体样式 */
         body {
             line-height: 1.6;
             color: var(--dark);
@@ -33,14 +38,15 @@
             overflow-x: hidden;
         }
 
-        。container {
+        /* 容器样式 - 居中布局 */
+        .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
 
-        /* 英雄区域样式 */
+        /* 英雄区域样式 - 网站顶部大图区域 */
         .hero {
             height: 100vh;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -51,6 +57,7 @@
             overflow: hidden;
         }
 
+        /* 英雄区域背景装饰 */
         .hero::before {
             content: '';
             position: absolute;
@@ -61,24 +68,28 @@
             background-position: center;
         }
 
+        /* 英雄区域内容样式 */
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 600px;
         }
 
+        /* 英雄区域主标题 */
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
+        /* 英雄区域描述文本 */
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
 
+        /* 按钮通用样式 */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -93,6 +104,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* 按钮悬停效果 */
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -105,29 +117,34 @@
             background-color: var(--light);
         }
 
+        /* 区块标题样式 */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
         }
 
+        /* 区块主标题 */
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--dark);
             margin-bottom: 15px;
         }
 
+        /* 区块描述文本 */
         .section-title p {
             color: #666;
             max-width: 600px;
             margin: 0 auto;
         }
 
+        /* 特性网格布局 */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
+        /* 特性卡片样式 */
         .feature-card {
             background: white;
             border-radius: 10px;
@@ -137,11 +154,13 @@
             text-align: center;
         }
 
+        /* 特性卡片悬停效果 */
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
+        /* 特性图标样式 */
         .feature-icon {
             width: 70px;
             height: 70px;
@@ -155,12 +174,14 @@
             font-size: 1.8rem;
         }
 
+        /* 特性卡片标题 */
         .feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--dark);
         }
 
+        /* 特性卡片描述文本 */
         .feature-card p {
             color: #666;
         }
@@ -170,27 +191,32 @@
             padding: 100px 0;
         }
 
+        /* 关于我们内容布局 */
         .about-content {
             display: flex;
             align-items: center;
             gap: 50px;
         }
 
+        /* 关于我们文本区域 */
         .about-text {
             flex: 1;
         }
 
+        /* 关于我们标题 */
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--dark);
         }
 
+        /* 关于我们描述文本 */
         .about-text p {
             margin-bottom: 20px;
             color: #666;
         }
 
+        /* 关于我们图片区域 */
         .about-image {
             flex: 1;
             border-radius: 10px;
@@ -198,6 +224,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+        /* 关于我们图片样式 */
         .about-image img {
             width: 100%;
             height: auto;
@@ -205,6 +232,7 @@
             transition: transform 0.5s ease;
         }
 
+        /* 图片悬停效果 */
         .about-image:hover img {
             transform: scale(1.05);
         }
@@ -215,29 +243,34 @@
             background-color: var(--light);
         }
 
+        /* 联系内容网格布局 */
         .contact-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
         }
 
+        /* 联系信息标题 */
         .contact-info h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
             color: var(--dark);
         }
 
+        /* 联系信息文本 */
         .contact-info p {
             margin-bottom: 15px;
             color: #666;
         }
 
+        /* 联系信息图标 */
         .contact-info i {
             color: var(--primary);
             margin-right: 10px;
             width: 20px;
         }
 
+        /* 联系表单样式 */
         .contact-form {
             background: white;
             padding: 30px;
@@ -245,10 +278,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
+        /* 表单组样式 */
         .form-group {
             margin-bottom: 20px;
         }
 
+        /* 表单标签样式 */
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -256,6 +291,7 @@
             color: var(--dark);
         }
 
+        /* 表单控件样式 */
         .form-control {
             width: 100%;
             padding: 12px 15px;
@@ -265,11 +301,13 @@
             transition: border-color 0.3s ease;
         }
 
+        /* 表单控件聚焦效果 */
         .form-control:focus {
             border-color: var(--primary);
             outline: none;
         }
 
+        /* 文本区域样式 */
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
@@ -282,6 +320,7 @@
             padding: 70px 0 20px;
         }
 
+        /* 页脚内容网格布局 */
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -289,6 +328,7 @@
             margin-bottom: 50px;
         }
 
+        /* 页脚列标题 */
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
@@ -296,6 +336,7 @@
             padding-bottom: 10px;
         }
 
+        /* 页脚列标题下划线 */
         .footer-column h3::after {
             content: '';
             position: absolute;
@@ -306,30 +347,36 @@
             background-color: var(--accent);
         }
 
+        /* 页脚链接列表 */
         .footer-links {
             list-style: none;
         }
 
+        /* 页脚链接项 */
         .footer-links li {
             margin-bottom: 10px;
         }
 
+        /* 页脚链接样式 */
         .footer-links a {
             color: #aaa;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
+        /* 页脚链接悬停效果 */
         .footer-links a:hover {
             color: white;
         }
 
+        /* 社交媒体链接容器 */
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
 
+        /* 社交媒体链接样式 */
         .social-links a {
             display: flex;
             align-items: center;
@@ -342,11 +389,13 @@
             transition: all 0.3s ease;
         }
 
+        /* 社交媒体链接悬停效果 */
         .social-links a:hover {
             background-color: var(--primary);
             transform: translateY(-3px);
         }
 
+        /* 版权信息样式 */
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -354,44 +403,11 @@
             color: #aaa;
             font-size: 0.9rem;
         }
+
         /* ========== 手机端响应式设计 ========== */
         @media (max-width: 768px) {
-            /* 导航栏手机版 */
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px;
-                transition: left 0.3s ease;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links li {
-                margin: 15px 0;
-            }
-
-            .nav-links a {
-                font-size: 1.1rem;
-                padding: 10px 20px;
-            }
-
             /* 英雄区域手机版 */
             .hero {
-                margin-top: 60px;
                 min-height: 500px;
                 text-align: center;
             }
@@ -521,6 +537,7 @@
             }
         }
 
+        /* 小屏幕设备响应式调整 */
         @media (max-width: 576px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -541,56 +558,18 @@
     </style>
 </head>
 <body>
-        /* 响应式设计 */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .about-content {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .btn {
-                padding: 10px 25px;
-            }
-
-            .feature-card, .contact-form {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 英雄区域 -->
+    <!-- 英雄区域 - 网站顶部展示区域 -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1>打造卓越的在线体验</h1>
-                <p>不知道,就这样吧。</p>
+                <p>我们专注于创建美观、功能强大且用户友好的网站，帮助您的业务在数字世界中脱颖而出。</p>
                 <a href="#contact" class="btn">立即开始</a>
             </div>
         </div>
     </section>
 
-    <!-- 特性区域 -->
+    <!-- 特性区域 - 展示公司优势和服务 -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-title">
@@ -623,7 +602,7 @@
         </div>
     </section>
 
-    <!-- 关于我们区域 -->
+    <!-- 关于我们区域 - 介绍公司背景和团队 -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
@@ -640,7 +619,7 @@
         </div>
     </section>
 
-    <!-- 联系区域 -->
+    <!-- 联系区域 - 提供联系方式和联系表单 -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -686,7 +665,7 @@
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- 页脚 - 网站底部信息区域 -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -728,7 +707,7 @@
     </footer>
 
     <script>
-        // 表单提交
+        // 表单提交处理
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('感谢您的留言！我们会尽快与您联系。');
